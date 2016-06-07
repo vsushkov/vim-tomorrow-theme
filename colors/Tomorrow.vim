@@ -5,7 +5,7 @@
 
 " Default GUI Colours
 let s:foreground = "4d4d4c"
-let s:background = "ffffff"
+let s:background = "f7f9fc"
 let s:selection = "d6d6d6"
 let s:line = "efefef"
 let s:comment = "8e908c"
@@ -468,6 +468,18 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("diffAdded", s:green, "", "")
 	call <SID>X("diffRemoved", s:red, "", "")
 	call <SID>X("gitcommitSummary", "", "", "bold")
+
+    " Elixir
+    call <SID>X("elixirFunctionDeclaration", s:aqua, "", "")
+    call <SID>X("elixirBlockDefinition", s:purple, "", "")
+    "call <SID>X("elixirUnusedVariable", s:orange, "", "")
+    "call <SID>X("elixirAlias", s:aqua, "", "")
+    "call <SID>X("elixirMacroDeclaration", s:aqua, "", "")
+    "call <SID>X("elixirOverridableDefine", s:aqua, "", "")
+    call <SID>X("elixirInclude", s:purple, "", "")
+    call <SID>X("elixirOperator", s:foreground, "", "")
+    "call <SID>X("elixirStructDefine", s:foreground, "", "")
+    "call <SID>X("elixirAtom", s:foreground, "", "")
 
 	" Delete Functions
 	delf <SID>X
